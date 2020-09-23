@@ -1,3 +1,3 @@
 <?
-$MESS["SUCCESS"] = "Модуль alfa1c.adsectlist успешно установлен";
+$MESS["SUCCESS"] = "Модуль kit.adsectlist успешно установлен";
 ?>

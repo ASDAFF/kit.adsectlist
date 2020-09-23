@@ -35,13 +35,13 @@ $arParams["ADD_SECTIONS_CHAIN"] = $arParams["ADD_SECTIONS_CHAIN"]!="N"; //Turn o
 $arResult["SECTIONS"]=array();
 
 if($arParams['INCLUDE_JQUERY'] == 'Y'):
-	$APPLICATION->AddHeadScript('/bitrix/js/alfa1c.adsectlist/jquery-1.9.1.min.js');
+	$APPLICATION->AddHeadScript('/bitrix/js/kit.adsectlist/jquery-1.9.1.min.js');
 endif;
 
 if($arParams['INCLUDE_CHOOSEN'] == 'Y'):
 ?>
-	<script language="javascript" src="/bitrix/js/alfa1c.adsectlist/chosen.jquery.min.js"></script>
-	<script language="javascript" src="/bitrix/js/alfa1c.adsectlist/scripts.js"></script>
+	<script language="javascript" src="/bitrix/js/kit.adsectlist/chosen.jquery.min.js"></script>
+	<script language="javascript" src="/bitrix/js/kit.adsectlist/scripts.js"></script>
 	<?
 endif;
 /*************************************************************************

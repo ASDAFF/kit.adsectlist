@@ -1,3 +1,3 @@
 <?
-$MESS["SUCCESS"] = "Модуль alfa1c.adsectlist успешно удален из системы";
+$MESS["SUCCESS"] = "Модуль kit.adsectlist успешно удален из системы";
 ?>

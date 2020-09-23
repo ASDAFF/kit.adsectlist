@@ -1,7 +1,6 @@
 # Продвинутая структура разделов
 ![alt-текст](img_md/addsect-logo.png "1") 
 
-https://marketplace.1c-bitrix.ru/solutions/alfa1c.adsectlist/ 
 
 **Описание**
 

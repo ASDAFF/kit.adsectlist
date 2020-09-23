@@ -3,16 +3,16 @@ global $MESS;
 $strPath2Lang = str_replace("\\", "/", __FILE__);
 $strPath2Lang = substr($strPath2Lang, 0, strlen($strPath2Lang)-strlen("/install/index.php"));
 include(GetLangFileName($strPath2Lang."/lang/", "/install/index.php"));
-Class alfa1c_adsectlist extends CModule
+Class kit_adsectlist extends CModule
 {
-var $MODULE_ID = "alfa1c.adsectlist";
+var $MODULE_ID = "kit.adsectlist";
 var $MODULE_VERSION;
 var $MODULE_VERSION_DATE;
 var $MODULE_NAME;
 var $MODULE_DESCRIPTION;
 var $MODULE_CSS;
 
-function alfa1c_adsectlist()
+function kit_adsectlist()
 {
 	$arModuleVersion = array();
 
@@ -34,19 +34,19 @@ function alfa1c_adsectlist()
 
 function InstallFiles($arParams = array())
 {
-	CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/alfa1c.adsectlist/install/js", $_SERVER["DOCUMENT_ROOT"]."/bitrix/js/alfa1c.adsectlist");
-	CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/alfa1c.adsectlist/install/themes", $_SERVER["DOCUMENT_ROOT"]."/bitrix/themes/", true, true);
-	CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/alfa1c.adsectlist/install/components", $_SERVER["DOCUMENT_ROOT"]."/bitrix/components", true, true);
+	CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/kit.adsectlist/install/js", $_SERVER["DOCUMENT_ROOT"]."/bitrix/js/kit.adsectlist");
+	CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/kit.adsectlist/install/themes", $_SERVER["DOCUMENT_ROOT"]."/bitrix/themes/", true, true);
+	CopyDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/kit.adsectlist/install/components", $_SERVER["DOCUMENT_ROOT"]."/bitrix/components", true, true);
 	return true;
 }
 
 function UnInstallFiles()
 {
-	DeleteDirFilesEx("/bitrix/components/alfa1c/catalog.section.list");
-	DeleteDirFilesEx("/bitrix/themes/.default/alfa1c.adsectlist");
-	DeleteDirFilesEx("/bitrix/themes/.default/alfa1c.adsectlist.css");
-	DeleteDirFilesEx("/bitrix/components/alfa1c/catalog.section.list");
-	DeleteDirFilesEx("/bitrix/js/alfa1c.adsectlist");
+	DeleteDirFilesEx("/bitrix/components/kit/catalog.section.list");
+	DeleteDirFilesEx("/bitrix/themes/.default/kit.adsectlist");
+	DeleteDirFilesEx("/bitrix/themes/.default/kit.adsectlist.css");
+	DeleteDirFilesEx("/bitrix/components/kit/catalog.section.list");
+	DeleteDirFilesEx("/bitrix/js/kit.adsectlist");
 	return true;
 }
 
@@ -54,8 +54,8 @@ function DoInstall()
 {
 	global $DOCUMENT_ROOT, $APPLICATION;
 	$this->InstallFiles();
-	RegisterModule("alfa1c.adsectlist");
-	$APPLICATION->IncludeAdminFile(GetMessage("MODULE_INSTALL"), $DOCUMENT_ROOT."/bitrix/modules/alfa1c.adsectlist/install/step.php");
+	RegisterModule("kit.adsectlist");
+	$APPLICATION->IncludeAdminFile(GetMessage("MODULE_INSTALL"), $DOCUMENT_ROOT."/bitrix/modules/kit.adsectlist/install/step.php");
 		print_r($DOCUMENT_ROOT);
 }
 
@@ -63,8 +63,8 @@ function DoUninstall()
 {
 	global $DOCUMENT_ROOT, $APPLICATION;
 	$this->UnInstallFiles();
-	UnRegisterModule("alfa1c.adsectlist");
-	$APPLICATION->IncludeAdminFile(GetMessage("MODULE_UNINSTALL"), $DOCUMENT_ROOT."/bitrix/modules/alfa1c.adsectlist/install/unstep.php");
+	UnRegisterModule("kit.adsectlist");
+	$APPLICATION->IncludeAdminFile(GetMessage("MODULE_UNINSTALL"), $DOCUMENT_ROOT."/bitrix/modules/kit.adsectlist/install/unstep.php");
 }
 }
 ?>
